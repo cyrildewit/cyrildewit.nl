@@ -1,0 +1,140 @@
+// ========================================================================
+//
+// Name:            Buttons
+// Description:     <description>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+$btn-font-family: $font-family-headings;
+
+
+// Mixins
+// ========================================================================
+
+
+// Atom: Button
+// ========================================================================
+
+//
+// 1. Remove margins in Chrome, Safari and Opera.
+// 2. Remove borders for `button`.
+// 3. Address `overflow` set to `hidden` in IE.
+// 4. Correct `font` properties and `color` not being inherited for `button`.
+// 5. Remove the inheritance of text transform in Edge, Firefox, and IE.
+// 6. Adding the base style
+// 7. `line-height` is used to create a height because it also centers the
+//    text vertically for `a` elements.
+//    Better would be to use height and flexbox to center the text
+//    vertically but flexbox doesn't work in Firefox on `button` elements.
+// 8. Align text if button has a width.
+// 9. Required for `a`.
+// 10. Add a transition for having a smooth view.
+//
+.btn {
+    // 1
+    margin: 0;
+    // 2
+    border: none;
+    // 3
+    overflow: visible;
+    // 4
+    font: inherit;
+    color: inherit;
+    // 5
+    text-transform: none;
+    // 6
+    display: inline-block;
+    padding: 10px 25px;
+    font-family: $btn-font-family;
+    font-size: 16px;
+    font-weight: 500;
+    vertical-align: middle;
+    border-radius: (24px + (2 * 10px)); // element height plus the padding
+    box-sizing: border-box;
+    // 7
+    // line-height: 50px;
+    // 8
+    text-align: center;
+    // 9
+    text-decoration: none;
+    // 10
+    // -webkit-transition: 0.1s ease-in-out;
+
+    // -webkit-transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color;
+    // @include transition(0.4s ease all);
+}
+
+.btn:not(:disabled) {
+    cursor: pointer;
+}
+
+// Remove the inner border and padding in Firefox.
+.btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+// Hover
+.btn:hover {
+    // 8
+    text-decoration: none;
+}
+
+// Focus
+.btn:focus {
+    outline: none;
+}
+
+// // OnClick + Active
+// .button:active,
+// .button.active {
+//     //
+// }
+
+
+// Style modifiers
+// ========================================================================
+
+//
+// Primary
+//
+
+.btn {
+    @include modifier('primary') {
+        background: $brand-primary-green;
+        border: 2px solid $brand-primary-green;
+        font-family: $font-family-serif;
+        letter-spacing: 1px;
+        color: $white;
+
+        // Hover + Focus
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            // border-color: lighten($brand-light-green, 15%);
+            color: $gray-dark;
+        }
+    }
+}
+
+// // OnClick + Active
+// .btn-primary:active,
+// .btn-primary.active {
+//     background-color: $c-btn-active__primary--color;
+//     color: $c-btn-active__primary--color;
+// }
+
+//
+// Secondary
+//
+
+.btn {
+    @include modifier('secondary') {
+        border: 2px solid $brand-primary-green;
+        color: lighten($brand-primary-navy-blue, 2%);
+    }
+}

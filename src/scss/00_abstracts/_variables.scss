@@ -1,0 +1,106 @@
+// ========================================================================
+//
+// Name:            Variables
+// Description:     <description here>
+//
+//
+//  Table of Contents:
+//
+//   1. Colors
+//   2. Spacing
+//   3. Body
+//   4. Components
+//   5. Typography
+//   6. Tables
+//   7. Grid
+//     1. breakpoints
+//     2. containers
+//     3. collumns
+//   8. Z-index master list
+//
+// ========================================================================
+
+// Section: Colors
+// ========================================================================
+
+$brand-primary-green:       #2CC990;
+$brand-primary-navy-blue:   #323A3E;
+$brand-lightest-grey:       #F8FAFC;
+
+$muted-brand-green:           rgb(242, 248, 246);
+
+$white:                     #FFFFFF;
+$black:                     #22292F;
+
+// Grayscale
+$gray-dark:             #292B2C;
+$gray:                  #464A4C;
+$gray-light:            #636C72;
+$gray-lighter:          #ECEEEF;
+$gray-lightest:         #F7F7F9;
+
+
+// Section: Typography
+// ========================================================================
+
+$font-family-base:      "Lato", sans-serif;
+$font-family-headings:  "Montserrat", sans-serif;
+$font-family-serif:     "Playfair Display", serif;
+
+$font-size-html:  16px;
+$font-size-base:  1rem;
+
+
+// Section: Spacing
+// ========================================================================
+
+$spacer: 1rem; // 16px
+
+
+// Section: Utilities
+// ========================================================================
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+
+
+// Section: Grid
+// ========================================================================
+
+$enable-grid-classes:       true !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;

@@ -1,0 +1,54 @@
+// ========================================================================
+//
+// Name:            Section Header
+// Description:     <description here>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+
+// Mixins
+// ========================================================================
+
+
+// Molecule: Section Header
+// ========================================================================
+
+.m-section-header {
+    // Modifiers
+    @include modifier('centered-content') {
+        text-align: center;
+    }
+    @include modifier('padding-normal') {
+        padding-bottom: 47px; //
+    }
+    // Elements
+    @include element('content-wrapper') {
+        max-width: 740px;
+        margin: 0 auto;
+    }
+    @include element('title') {
+        margin: 0;
+        font-size: 32px;
+        color: $brand-primary-navy-blue;
+    }
+    @include element('divider') {
+        max-width: 100px;
+        margin: 15px 0;
+        border-width: 3px;
+        border-color: $brand-primary-green;
+        //
+        @include modifier('center') {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    @include element('text') {
+        margin: 0;
+    }
+    @include element('btn-read-more') {
+        margin: 30px 0 0 0;
+    }
+}

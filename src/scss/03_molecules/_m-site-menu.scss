@@ -1,0 +1,51 @@
+// ========================================================================
+//
+// Name:            Site Menu
+// Description:     <description here>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+
+// Mixins
+// ========================================================================
+
+
+// Molecule: Site Menu
+// ========================================================================
+
+.m-site-menu {
+    line-height: 24px;
+    //
+    @media (max-width: 767px) {
+        display: none;
+    }
+    @include element('link') {
+        display: inline-block;
+        margin-right: 15px;
+        padding: 10px 0;
+        font-family: $font-family-headings;
+        font-weight: 500;
+        // color: #4A5256;
+        // color: #7e8a90;
+        color: #464f53;
+        border-bottom: 2px solid transparent;
+        transition: all 0.15s linear;
+        //
+        @include plain-hover-focus() {
+            text-decoration: none;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        @include modifier('active') {
+            color: $brand-primary-green;
+            border-color: $brand-primary-green;
+        }
+        @include hover() {
+            color: $brand-primary-green;
+        }
+    }
+}

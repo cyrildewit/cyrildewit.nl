@@ -1,0 +1,170 @@
+// ========================================================================
+//
+// Name:            <molecule name>
+// Description:     <description here>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+
+// Mixins
+// ========================================================================
+
+
+// Molecule: <molecule name>
+// ========================================================================
+
+.c-hero-intro-shape {
+    position: absolute;
+    //
+    @include modifier('triangular-1') {
+        fill: none;
+        stroke: $brand-primary-green;
+        stroke-width: 3px;
+        //
+        @media (max-width: 576px) {
+            display: none;
+        }
+        @media (min-width: 576px) {
+            top: 18%;
+            right: 8%;
+            width: 80px;
+            height: 80px;
+        }
+        @media (min-width: 992px) {
+            top: 32%;
+            right: 10%;
+            width: 110px;
+            height: 110px;
+        }
+    }
+    @include modifier('triangular-2') {
+        fill: none;
+        stroke: $brand-primary-green;
+        stroke-width: 3px;
+        transform: rotate(-20deg);
+        //
+        @media (max-width: 576px) {
+            display: none;
+        }
+        @media (min-width: 576px) {
+            top: 18%;
+            right: 33%;
+            width: 50px;
+            height: 50px;
+        }
+        @media (min-width: 992px) {
+            top: 16%;
+            right: 40%;
+            width: 70px;
+            height: 70px;
+        }
+    }
+    @include modifier('rectangle-1') {
+        fill: none;
+        stroke: $brand-primary-green;
+        stroke-width: 15px;
+        transform: rotate(-45deg);
+        //
+        @media (max-width: 576px) {
+            display: none;
+        }
+        @media (min-width: 576px) {
+            top: 18%;
+            left: 10%;
+            width: 30px;
+            height: 30px;
+        }
+        @media (min-width: 992px) {
+            top: 18%;
+            left: 10%;
+            width: 30px;
+            height: 30px;
+            stroke-width: 20px;
+        }
+    }
+    @include modifier('rectangle-1') {
+        fill: none;
+        stroke: $brand-primary-green;
+        stroke-width: 10px;
+        transform: rotate(-45deg);
+        //
+        @media (max-width: 576px) {
+            display: none;
+        }
+        @media (min-width: 576px) {
+            display: none;
+        }
+        @media (min-width: 1420px) {
+            display: block;
+            top: 38%;
+            left: 2%;
+            width: 30px;
+            height: 30px;
+        }
+        // @media (min-width: 992px) {
+        //     top: 18%;
+        //     left: 10%;
+        //     width: 30px;
+        //     height: 30px;
+        //     stroke-width: 20px;
+        // }
+    }
+    @include modifier('circle-1') {
+        fill: $brand-primary-green;
+        width: 20px;
+        height: 20px;
+        //
+        @media (max-width: 576px) {
+            display: none;
+        }
+        @media (min-width: 576px) {
+            bottom: 7%;
+            left: 17%;
+        }
+    }
+    @include modifier('circle-2') {
+        fill: none;
+        stroke: $brand-primary-green;
+        stroke-width: 4px;
+        width: 60px;
+        height: 60px;
+        //
+        @media (max-width: 576px) {
+            display: none;
+        }
+        @media (min-width: 576px) {
+            bottom: 23%;
+            right: 32%;
+        }
+        @media (max-width: 1199px) {
+            right: 23%;
+        }
+        @media (max-width: 991px) {
+            right: 15%;
+        }
+    }
+    @include modifier('circle-3') {
+        fill: $brand-primary-green;
+        stroke-width: 4px;
+        width: 290px;
+        //
+        @media (max-width: 576px) {
+            display: none;
+        }
+        @media (min-width: 576px) {
+            bottom: 10%;
+            right: 45%;
+        }
+        @media (max-width: 1199px) {
+            bottom: 5%;
+            right: 33%;
+        }
+        @media (max-width: 991px) {
+            bottom: 1%;
+            right: 20%;
+        }
+    }
+}

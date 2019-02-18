@@ -1,0 +1,35 @@
+// ========================================================================
+//
+// Name:            Organism
+// Description:     <description here>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+
+// Mixins
+// ========================================================================
+
+
+// Organism: Organism
+// ========================================================================
+
+.o-section {
+    padding: 100px 0;
+    // Modifiers
+    @include modifier('bg-white') {
+        background-color: $white;
+    }
+    @include modifier('border-top-light') {
+        border-top: 1px solid #E3E3E3;
+    }
+    @include modifier('border-bottom-light') {
+        border-bottom: 1px solid #E3E3E3;
+    }
+    //
+    @media (max-width: 576px) {
+        padding: 70px 0;
+    }
+}

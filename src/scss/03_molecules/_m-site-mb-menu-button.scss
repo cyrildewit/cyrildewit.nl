@@ -1,0 +1,80 @@
+// ========================================================================
+//
+// Name:            Site Mobile Menu Button
+// Description:     <description here>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+
+// Mixins
+// ========================================================================
+
+
+// Molecule: Site Mobile Menu Button
+// ========================================================================
+
+.m-site-mb-menu-button {
+    $hambuger-line-color: #4A5256;
+    display: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    box-shadow: 0 3px 9px rgba(50, 58, 62, 0.16);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: box-shadow 120ms ease-in-out;
+    //
+    @media (max-width: 767px) {
+        display: block;
+    }
+    @include element('hambuger-icon') {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 4px;
+        margin: auto;
+        background-color: $hambuger-line-color;
+        text-indent: -99999px;
+        transition: all .2s linear;
+        //
+        &::before {
+            position: absolute;
+            top: -6px;
+            left: 0;
+            border-radius: 2px;
+            width: 100%;
+            height: 2px;
+            background-color: $hambuger-line-color;
+            content: "";
+            transition: all .2s linear;
+        }
+        &::after {
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border-radius: 2px;
+            background-color: $hambuger-line-color;
+            content: "";
+            transition: all .2s linear;
+        }
+    }
+    &:hover {
+        box-shadow: 0 6px 12px rgba(50, 58, 62, 0.16);
+    }
+    &:hover &__hambuger-icon,
+    &:hover &__hambuger-icon::before,
+    &:hover &__hambuger-icon::after {
+        background-color: $brand-primary-green;
+    }
+}

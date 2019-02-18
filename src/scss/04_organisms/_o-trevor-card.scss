@@ -1,0 +1,197 @@
+// ========================================================================
+//
+// Name:            <organism name>
+// Description:     <description here>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+
+// Mixins
+// ========================================================================
+
+
+// Organism: <organism name>
+// ========================================================================
+
+.o-trevor-card {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: $white;
+    padding: 40px 20px;
+    box-shadow: 0 6px 12px rgba($brand-primary-navy-blue, .16);
+    // border: 1px solid #eaeaea;
+    border-radius: 2px;
+    //
+    @include element('corner-shape') {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        // width: 320px;
+        height: auto;
+        fill: $brand-primary-green;
+        // box-shadow: 0 -2px 6px rgba($brand-primary-navy-blue, .16);
+        //
+        @media (max-width: 991px) {
+            height: 100px;
+        }
+    }
+}
+
+.o-trevor-card-image {
+    margin-left: -80px;
+    width: 40%;
+    max-width: 100%;
+    float: left;
+    box-shadow: 0 6px 12px rgba($brand-primary-navy-blue, .16);
+    //
+    @include element('overlay') {
+        display: none;
+    }
+}
+
+.o-trevor-card-content {
+    float: right;
+    width: 60%;
+    //
+    @media (max-width: 991px) {
+        width: 68%;
+    }
+    @include element('title') {
+        margin: 0 0 15px 0;
+        font-size: 32px;
+        font-weight: 600; // default: 500
+        color: #323A3E;
+    }
+    @include element('category') {
+        display: block;
+        margin: 30px 0 0 0;
+        color: $brand-primary-navy-blue;
+        height: 25px;
+        &-icon {
+            float: left;
+            margin-top: (5px / 2);
+            width: 20px;
+            height: 20px;
+            padding: 4px;
+            fill: $brand-primary-green;
+        }
+        &-text {
+            float: left;
+            margin-left: 12px;
+            font-family: $font-family-headings;
+            font-weight: 500;
+            line-height: 25px;
+            height: 25px;
+        }
+    }
+    @include element('show-project') {
+        // position: absolute;
+        // bottom: 60px;
+        margin-top: 60px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .o-trevor-card {
+        padding: 0;
+        border-bottom: 8px solid $brand-primary-green;
+        //
+        // @include element('corner-shape') {
+        //     display: none;
+        // }
+    }
+    .o-trevor-card-image {
+        display: none;
+    }
+    .o-trevor-card-content {
+        float: none;
+        width: 100%;
+        padding: 40px;
+        //
+        // @include element('title') {
+        //     margin: 0 0 10px 0;
+        //     font-size: 34px;
+        //     color: #323A3E;
+        // }
+        @include element('category') {
+            display: none !important;
+        }
+        @include element('show-project') {
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .o-trevor-card {
+        max-width: 100%;
+    }
+}
+
+
+// @media (max-width: 767px) {
+//     .o-trevor-card {
+//         // max-width: 100%;
+//         padding: 0;
+//         border-bottom: 8px solid $brand-primary-green;
+//         //
+//         @include element('corner-shape') {
+//             display: none;
+//         }
+//     }
+//     .o-trevor-card-image {
+//         margin-left: 0;
+//         width: 100%;
+//         box-shadow: 0 0 0;
+//         //
+//         @include element('wrapper') {
+//             position: relative;
+//             max-height: 240px;
+//             overflow: hidden;
+//             border-bottom: 4px solid #486671; //$brand-primary-navy-blue
+//         }
+//         @include element('overlay') {
+//             display: block;
+//             position: absolute;
+//             top: 0;
+//             right: 0;
+//             bottom: 0;
+//             left: 0;
+//             // background: #344146;
+//             opacity: 0.3;
+//             // z-index: 15;
+//             box-shadow: inset 0 0 138px #344146;
+//         }
+//     }
+//     .o-trevor-card-content {
+//         float: right;
+//         width: 100%;
+//         padding: 20px 40px;
+//         //
+//         @include element('title') {
+//             margin: 0 0 10px 0;
+//             font-size: 34px;
+//             color: #323A3E;
+//         }
+//         @include element('category') {
+//             display: none !important;
+//         }
+//         @include element('show-project') {
+//             margin-top: 15px;
+//         }
+//     }
+// }
+
+// @media (max-width: 576px) {
+//     .o-trevor-card {
+//         max-width: 90%;
+//     }
+//     .o-trevor-card-content {
+//         padding: 20px 20px;
+//     }
+// }
