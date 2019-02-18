@@ -1,0 +1,28 @@
+{
+  "name": "perceptor-studio",
+  "version": "1.0.0",
+  "description": "Create static sites really quickly using Perceptor and browsersync.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cyril de Wit",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.1.0",
+    "bootstrap": "^4.1.3",
+    "browser-sync": "^2.24.6",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "minimist": "^1.2.0",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
+  }
+}
