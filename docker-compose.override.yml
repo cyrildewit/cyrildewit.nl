@@ -1,0 +1,13 @@
+services:
+  site:
+    build:
+      context: .
+      dockerfile: ./docker/astro-site/Dockerfile
+    tty: true
+    volumes:
+      - .:/app
+
+#networks:
+#  traefik-gateway:
+#    name: traefik-gateway
+#    external: true
