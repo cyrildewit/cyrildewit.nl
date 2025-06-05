@@ -1,0 +1,10 @@
+baseUrl: "https://cyrildewit.com"
+locale: "en-US"
+title: "Cyril de Wit"
+navigation:
+    - label: "Home"
+      url: "/"
+    - label: "About"
+      url: "/about/"
+    - label: "Blog"
+      url: "/Blog/"
